@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar";
 import ProtectedRoute from "../components/ProtectedRoute";
 import { useAuth } from "../context/AuthContext";
 
+
 export default function Historico() {
   const [relatos, setRelatos] = useState<any[]>([]);
   const [carregando, setCarregando] = useState(true);
