@@ -6,7 +6,7 @@ import { AuthProvider } from "./context/AuthContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sistema de Registro de Erros",
+  title: "HelpDesk - AI Support",
   description: "Registre e analise erros do sistema",
 };
 
