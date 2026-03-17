@@ -54,7 +54,7 @@ export default function DetalhesRelato() {
         <SideBar />
         
         <div className="container mx-auto px-4 py-8 flex justify-center">
-          <div className="w-full max-w-3xl">
+          <div className="w-full max-w-7xl">
             
             {carregando ? (
               <div className="flex justify-center items-center h-64">
@@ -66,7 +66,6 @@ export default function DetalhesRelato() {
                 
                 {/* Cabeçalho do Card */}
                 <div className="bg-blue-600 p-6 text-white flex justify-between items-center">
-                  <h1 className="text-2xl font-bold">{relato.resumo || "Análise Detalhada"}</h1>
                   <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold backdrop-blur-sm">
                     {relato.categoria}
                   </span>
@@ -89,16 +88,30 @@ export default function DetalhesRelato() {
 
                   <hr className="border-gray-100" />
 
-                  {/* Relato Original do Usuário */}
-                  <div>
-                    <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">
-                      Relato Original
-                    </h3>
-                    <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                      <p className="text-gray-700 whitespace-pre-wrap italic">
-                        "{relato.relato_original}"
-                      </p>
+                  <div className="relatos flex gap-5">
+
+                    {/* Relato Original do Usuário */}
+                    <div>
+                        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">
+                        Relato Original
+                        </h3>
+                        <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <p className="text-gray-700 whitespace-pre-wrap italic">
+                            "{relato.relato_original}"
+                        </p>
+                        </div>
                     </div>
+                    
+                    {/* Relato da IA */}
+                    <div>
+                        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Relato IA</h3>
+                        <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <p className="text-gray-700 whitespace-pre-wrap italic">
+                            "{relato.resumo}"
+                        </p>
+                        </div>
+                    </div>
+
                   </div>
 
                   {/* Palavras-chave */}
