@@ -29,7 +29,7 @@ export default function AnimatedMenu() {
     // 👉 1. ABRE MENU
     tl.to(menuRef.current, {
       duration: 0.7,
-      x: "0%",
+      y: "0%",
       ease: "expo.out"
     });
 
@@ -60,7 +60,7 @@ export default function AnimatedMenu() {
     // 👉 3. FECHA MENU depois
     tl.to(menuRef.current, {
       duration: 0.7,
-      x: "-100%",
+      y: "-100%",
       ease: "expo.inOut"
     }, "+=1"); // espera 1s após texto
 
