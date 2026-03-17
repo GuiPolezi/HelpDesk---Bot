@@ -6,7 +6,7 @@ import { db } from "../../firebase"; // Ajuste o caminho se necessário
 import Link from "next/link";
 
 export default function SideBar() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const [analises, setAnalises] = useState<any[]>([]);
 
 useEffect(() => {
@@ -36,14 +36,7 @@ useEffect(() => {
   return (
     <div className="w-64 bg-gray-800 text-white min-h-screen flex flex-col">
       <div className="p-4 border-b border-gray-700">
-        {/* Botão para criar uma nova análise (leva para a Home) */}
-        <Link 
-          href="/" 
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg block text-center mb-4 transition"
-        >
-          + Nova Análise
-        </Link>
-        <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
+        <h2 className="text-xss font-bold text-gray-400 uppercase tracking-wider">
           Histórico de Análises
         </h2>
       </div>
@@ -71,6 +64,19 @@ useEffect(() => {
             ))
           )}
         </ul>
+      </div>
+      
+      <div className="footermenu mb-5 items-center flex flex-col">
+         {/* Botão para criar uma nova análise (leva para a Home) */}
+        <Link style={{width: "220px"}}
+          href="/" 
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg block text-center mb-4 transition"
+        >
+          + Nova Análise
+        </Link>
+        <button style={{width: "220px"}} onClick={() => logout()} className="bg-red-500 hover:bg-red-600 py-2 text-white rounded-lg text-sm">
+           Sair
+        </button>
       </div>
     </div>
   );
