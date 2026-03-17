@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "./context/AuthContext";
 import { useRouter } from "next/navigation";
 import { auth } from "../firebase";
-import Navbar from "./components/Navbar";
+import SideBar from "./components/SideBar";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function Home() {
@@ -66,8 +66,8 @@ export default function Home() {
       }, []);
    return (
     <ProtectedRoute>
-          <section style={{height: "93vh"}}>
-              <Navbar />
+          <section className="flex" style={{height: "93vh"}}>
+              <SideBar />
               <div className="container text-center mx-auto flex flex-col justify-center h-full">
                   <div className="image flex justify-center">
                       <img src="/wall-e.png" className="img-fluid" alt="wall-e" />

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
+import SideBar from "../components/SideBar";
 import { auth } from "@/firebase";
 
 export default function Teste() {
@@ -60,8 +60,8 @@ export default function Teste() {
     }, []);
 
     return (
-        <section style={{height: "93vh"}}>
-            <Navbar />
+        <section className="flex" style={{height: "93vh"}}>
+            <SideBar />
             <div className="container text-center mx-auto flex flex-col justify-center h-full">
                 <div className="image flex justify-center">
                     <img src="/wall-e.png" className="img-fluid" alt="wall-e" />
