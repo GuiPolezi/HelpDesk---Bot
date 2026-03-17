@@ -92,7 +92,7 @@ export default function Home() {
             {frase}
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4 w-full max-w-4xl mx-auto md:mx-0">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4 w-full mx-auto md:mx-0">
             <textarea
               className="w-full h-40 md:h-48 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Descreva aqui o erro ocorrido, o que você estava fazendo, mensagens exibidas, etc..."
