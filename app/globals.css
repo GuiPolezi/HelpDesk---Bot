@@ -32,7 +32,7 @@ body {
 
     /* Movendo o menu para esquerda */
     transform: translateY(-100%);
-    z-index: 2;
+    z-index: 999;
     background: linear-gradient(225deg, #ff6f70 0.000%, #ffa091 20.000%, #ffc7b1 40.000%, #ffe4d0 60.000%, #fff6ee 80.000%, #fffcff 100.000%);
     top: 0;
     left: 0;
